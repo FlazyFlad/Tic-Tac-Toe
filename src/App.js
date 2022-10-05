@@ -44,9 +44,14 @@ function App() {
       setXIsNext(!xIsNext)
   }
 
+  const erase = () => {
+    setXIsNext(true)
+    setBoard(Array(9).fill(null))
+  }
+
   const startNewGame = () => {
       return (
-          <button className='start_btn' onClick={() => setBoard(Array(9).fill(null))}>Очистить поле</button>
+          <button className='start_btn' onClick={erase}>Очистить поле</button>
       )
   }
 
